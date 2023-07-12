@@ -1,9 +1,9 @@
 import Sequelize from 'sequelize';
 import dotenv from 'dotenv/config';
 
-const db = new Sequelize(process.env.DB_NOMBRE, process.env.DB_USER, process.env.DB_PASS, {
-    host: process.env.DB_HOST,
-    port: '3306',
+const db = new Sequelize(process.env.MYSQLDATABASE, process.env.MYSQLUSER, process.env.MYSQLPASSWORD, {
+    port: process.env.MYSQLHOST,
+    dialect: process.env.MYSQLPORT,
     dialect: 'mysql',
     define: {
         timestamps: false,
